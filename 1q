@@ -1,0 +1,3 @@
+index<br/>
+version: <%= version %>
+uptime: <%= uptime %>
