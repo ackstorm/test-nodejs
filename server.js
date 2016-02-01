@@ -14,7 +14,7 @@ var uptime = process.env.LANGUAGE;
 
 // index page 
 app.get('/', function(req, res) {
-    res.render('pages/index', {
+    res.render('pages/about', {
         version: version, 
 	uptime: uptime
     });
@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
 
 // about page 
 app.get('/about', function(req, res) {
-    res.render('pages/about');
+    res.render('pages/index');
 });
 
 app.listen(8080);
