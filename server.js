@@ -2,6 +2,7 @@
 // load the things we need
 var express = require('express');
 var app = express();
+var os = require('os');
 
 // set the view engine to ejs
 app.set('view engine', 'ejs');
@@ -12,16 +13,19 @@ app.use(express.static(__dirname + '/public'));
 
 var fs = require('fs');
 var obj = JSON.parse(fs.readFileSync('./info.json', 'utf8'));
-var version = obj.commit;
-var uptime = obj.when;
+var gh_version = obj.commit;
+var gh_msg = obj.message;
+var gh_date = obj.when;
 
 // use res.render to load up an ejs view file
 
 // index page 
 app.get('/', function(req, res) {
     res.render('pages/index', {
-        version: version, 
-	uptime: uptime
+		srv_uptime: Number((process.uptime()).toFixed(0)),
+		gh_version: gh_version,
+		gh_msg: gh_msg,
+		gh_date: gh_date
     });
 });
 
