@@ -13,12 +13,12 @@ header {
 	font-size: 32px;
 	line-height: 50px;
 	text-align: left;
-	background-color: red;
+	background-color: darkorange;
 	padding: 12px;
 }
 
 .right_content h2 i {
-	font-size: 32px;
+	font-size: 60px;
 }
 
 @media (max-width: 767px) {
