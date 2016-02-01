@@ -7,14 +7,19 @@ var app = express();
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 
-var version = process.env.HOME;
-var uptime = process.env.LANGUAGE;
+//var version = process.env.HOME;
+//var uptime = process.env.LANGUAGE;
+
+var fs = require('fs');
+var obj = JSON.parse(fs.readFileSync('./info.json', 'utf8'));
+var version = obj.commit;
+var uptime = obj.when;
 
 // use res.render to load up an ejs view file
 
 // index page 
 app.get('/', function(req, res) {
-    res.render('pages/about', {
+    res.render('pages/index', {
         version: version, 
 	uptime: uptime
     });
@@ -22,7 +27,7 @@ app.get('/', function(req, res) {
 
 // about page 
 app.get('/about', function(req, res) {
-    res.render('pages/index');
+    res.render('pages/about');
 });
 
 app.listen(8080);
