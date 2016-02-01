@@ -11,6 +11,8 @@ app.use(express.static(__dirname + '/public'));
 //var version = process.env.HOME;
 //var uptime = process.env.LANGUAGE;
 
+typo
+
 var fs = require('fs');
 var obj = JSON.parse(fs.readFileSync('./info.json', 'utf8'));
 var gh_version = obj.commit;
