@@ -10,7 +10,6 @@ app.use(express.static(__dirname + '/public'));
 
 //var version = process.env.HOME;
 //var uptime = process.env.LANGUAGE;
-typo
 
 
 var fs = require('fs');
