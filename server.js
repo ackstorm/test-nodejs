@@ -13,7 +13,6 @@ app.use(express.static(__dirname + '/public'));
 
 var fs = require('fs');
 var obj = JSON.parse(fs.readFileSync('./info.json', 'utf8'));
-var srv_uptime = Number((os.uptime()).toFixed(0));
 var gh_version = obj.commit;
 var gh_msg = obj.message;
 var gh_date = obj.when;
@@ -23,7 +22,7 @@ var gh_date = obj.when;
 // index page 
 app.get('/', function(req, res) {
     res.render('pages/index', {
-		srv_uptime: srv_uptime,
+		srv_uptime: Number((process.uptime()).toFixed(0)),
 		gh_version: gh_version,
 		gh_msg: gh_msg,
 		gh_date: gh_date
