@@ -1,34 +1,34 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Tech demo @ack</title>
+		<title>Azure demo by ackstorm</title>
 		<meta charset="utf-8" />
 		<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
 		<!-- Bootstrap 3-->
 		<link href="/css/bootstrap.min.css" rel="stylesheet" media="screen">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" media="screen">
+
 		<!-- Google Fonts -->
 		<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+
 		<!-- Template Styles -->
 		<link href="/css/style.css" rel="stylesheet" media="screen">
 		<link href="/css/custom.css" rel="stylesheet" media="screen">
 	</head>
 	<body>
-
 		<header>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-6">
-						<img class="img-responsive col-md-12" src="/img/ack/logo_ack_white_transparent_1.png">
-						<img class="img-responsive col-md-12" src="/img/ack/logow_azure.png">
+						<img style="margin-top: 170px; width: 80%; margin-left: 70px;" class="img-responsive col-md-12" src="/img/ack/logo_ack_white_transparent_1.png">
 					</div>
 					<div style="padding-left:15px" class="col-md-6 right_content">
-						<h2><i class="fa fa-clock-o"></i> uptime: <span id="uptime"><%= srv_uptime %> seconds</span></h2>
-						<h2><i class="fa fa-github"></i> version: <span id="version"><%= gh_version %></span></h2>
-						<h2><i class="fa fa-file-text-o"></i> message: <span id="msg"><%= gh_msg %></span></h2>
-						<h2><i class="fa fa-calendar"></i> date: <span id="date"><%= gh_date %></span></h2>
+						<h2><i class="fa fa-clock-o"></i> Uptime <span id="uptime"><%= srv_uptime %> seconds</span></h2>
+						<h2><i class="fa fa-github"></i> Version is <span id="version"><%= gh_version %></span></h2>
+						<h2><i class="fa fa-file-text-o"></i><span id="msg"><%= gh_msg %></span></h2>
+						<h2><i class="fa fa-calendar"></i><span id="date"><%= gh_date %></span></h2>
 					</div>
 				</div>
 			</div>
@@ -36,44 +36,5 @@
 
 		<script src="/js/jquery.js"></script>
 		<script src="/js/bootstrap.min.js"></script>
-
-		<script>
-			/*
-			function load_stats() {
-				$.ajax({
-					url: 'https://storage.googleapis.com/moritz-demo-1138/data2-eu-west-1d.json',
-					Type: 'GET',
-					dataType: 'json',
-					success: function (data) {
-						$('#nodes').html(data.nodes);
-						$('#pods').html(data.pods);
-					},
-					error: function(xhr, status, error) {
-						console.log(status);
-					}
-				});
-			}
-			function load_visits() {
-				$.ajax({
-					url: '/visits',
-					Type: 'GET',
-					dataType: 'json',
-					success: function (data) {
-						$('#visits').html(data.total_visits);
-					},
-					error: function(xhr, status, error) {
-						console.log(status);
-					}
-				});
-			}
-			$(document).ready(function(){
-				load_stats();
-				window.setInterval(function(){
-					load_stats();
-					load_visits();
-				}, 4000);
-			});
-			*/
-		</script>
   	</body>
 </html>

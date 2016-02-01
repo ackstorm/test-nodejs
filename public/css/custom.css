@@ -1,5 +1,5 @@
 body {
-	background: url('/img/back_03.png') no-repeat fixed 80% 80%;
+	background: url('/img/back_03.png');
 	background-position: center;
 	text-align: left;
 }
@@ -10,15 +10,15 @@ header {
 
 .right_content h2 {
 	color: #fff;
-	font-size: 50px;
-	line-height: 75px;
+	font-size: 32px;
+	line-height: 32px;
 	text-align: left;
 	background-color: red;
 	padding: 12px;
 }
 
 .right_content h2 i {
-	font-size: 75px;
+	font-size: 32px;
 }
 
 @media (max-width: 767px) {
