@@ -1,7 +1,11 @@
 body {
-	background: url('/img/1098335.jpg') no-repeat fixed 80% 80%;
+	background: url('/img/back_02.jpg') no-repeat fixed 80% 80%;
 	background-position: center;
 	text-align: left;
+}
+
+header {
+	padding: 100px 0px 0px 0px;
 }
 
 .right_content h2 {
@@ -9,6 +13,8 @@ body {
 	font-size: 60px;
 	line-height: 75px;
 	text-align: left;
+	background-color: red;
+	padding: 12px;
 }
 
 .right_content h2 i {
